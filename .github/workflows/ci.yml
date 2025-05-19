@@ -22,9 +22,9 @@ jobs:
         run: |
           python -m venv venv
           venv\Scripts\activate
-          pip install pytest
+          pip install pytest pytest-cov
 
       - name: Run tests
         run: |
           venv\Scripts\activate
-          pytest
+          pytest --cov=math_app --cov-report=term
